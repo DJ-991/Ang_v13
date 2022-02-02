@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Route } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-one',
@@ -7,6 +7,7 @@ import { Router, Route } from '@angular/router';
   styleUrls: ['./one.component.css']
 })
 export class OneComponent implements OnInit {
+  allowServer = false;
 
   constructor(private router: Router) { }
 
@@ -14,7 +15,8 @@ export class OneComponent implements OnInit {
   }
 
   Visit(){
-    this.router.navigate(['/two']);
+    // this.router.navigate(['/two']);
+    this.allowServer = true;
   }
 
 }
