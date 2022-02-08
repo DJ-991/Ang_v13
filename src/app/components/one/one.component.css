@@ -1,6 +1,6 @@
 .items {
     border: 5px solid rgb(245, 205, 145);
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     margin: 10px;
     border-radius: 15px;
@@ -13,7 +13,7 @@
 
 .bi-archive-fill{
     margin-left: 4em;
-    font-size: 22px;
+    font-size: 21px;
     cursor: pointer;
 }
 
