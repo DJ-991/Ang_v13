@@ -1,5 +1,28 @@
-<h1>One works!</h1>
+<!-- <h1>One works!</h1>
 <button class="btn btn-primary" (click)="Visit()">Visit Here</button>
 <p [innerText]="allowServer"></p>
 
-<input type="text" value="Enter Number" />
+<input type="text" value="Enter Number" /> -->
+<form class="row g-5">
+  <div class="col-auto position-absolute top-0 start-50 translate-middle-x">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Item"
+      [(ngModel)]="inputValue"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <div class="col-5 position-absolute top-0 end-0">
+    <button class="btn btn-success" (click)="handleClick()">ADD ITEM</button>
+  </div>
+</form>
+
+<div class="col-2 position-absolute top-50 start-50 translate-middle">
+  <div class="No_Items" *ngIf="list.length === 0">No Items Found</div>
+
+  <div class="items" *ngFor="let task of list; let i = index">
+    {{ task.name }}
+    <i class="bi bi-archive-fill" (click)="RemoveItem(i)"></i>
+  </div>
+</div>

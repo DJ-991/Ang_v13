@@ -7,16 +7,38 @@ import { Router } from '@angular/router';
   styleUrls: ['./one.component.css']
 })
 export class OneComponent implements OnInit {
-  allowServer = false;
+  // allowServer = false;
+
+// Code
+inputValue ='';
+list: any = [];
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  Visit(){
-    // this.router.navigate(['/two']);
-    this.allowServer = true;
+  handleClick() {
+    if (this.inputValue.trim() !== ""){
+     this.list.push({
+      name: this.inputValue,
+      isCompleted: false
+    })
+      this.inputValue = '';
+    }
   }
+  RemoveItem(i: number):void {
+    this.list.splice(i, 1);
+  }
+
+
+
+
+
+
+
+  // Visit(){
+  //   this.allowServer = true;
+  // }
 
 }

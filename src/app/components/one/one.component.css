@@ -1,0 +1,25 @@
+.items {
+    border: 5px solid rgb(245, 205, 145);
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    color: black;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bi-archive-fill{
+    margin-left: 4em;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.No_Items{
+    font-size: 28px;
+    font-weight: bold;
+    color: darkgray;
+    text-align: center;
+}
